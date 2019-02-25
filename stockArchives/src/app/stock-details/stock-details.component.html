@@ -1,0 +1,35 @@
+<div id="stockd" >
+    <mat-form-field fxLayoutAlign="center center" class="stockd_datepicker">
+      <input matInput name="datePick" [min]="minDate" [max]="maxDate" [matDatepicker]="picker"  [value]="12/30/2016" (keyup.enter)="getByDate($event.target.value)" placeholder="Pick Date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <h3 *ngIf="stockDate">BEST PERFORMING STOCKS ON - {{stockDate | date}} </h3>
+    <h3 *ngIf="searchTickerName">Search Results  - {{searchTickerName | uppercase}}</h3>
+  <mat-grid-list cols="5" rowHeight="300px"> 
+  
+    <mat-grid-tile *ngFor="let element of data">
+        <mat-card class="stocd_card">
+          <mat-card-title>{{element.symbol}}</mat-card-title>
+          <mat-card-subtitle>{{element.date | date}}</mat-card-subtitle>
+          <div class="stockd_volume">VOLUME: {{element.volume}}</div>
+           <div class="stockd_low"><i class="material-icons" style="color:red">arrow_downward</i>{{element.low}}</div>
+                      <div class="stockd_high"><i class="material-icons" style="color:green">arrow_upward</i>{{element.high}}</div>
+          <mat-card-content>
+                      <p>PREV. CLOSE: {{element.close | number:'3.1-5'}}</p><h3>OPEN: {{element.open |  number:'3.1-5'}}</h3>
+
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button class="stockd_button">
+                  DETAILS
+            </button>
+          </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <div class="stockd_load" fxLayout="row" fxLayoutAlign="center center">
+      <button fxLayout  mat-raised-button color="warn" (click)="loadMore()">LOAD MORE...</button>
+  </div>
+  <app-header></app-header>
+</div>

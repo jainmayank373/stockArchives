@@ -1,0 +1,49 @@
+#stockd{
+    position: absolute;
+    top: 80%;
+    width:100%;
+    height:100%;
+ 
+}
+#stockd > h3{
+    
+    text-align: center;
+    font-weight: inherit;
+    color: darkslategrey;
+}
+.stocd_card{
+    width:180px;
+    box-shadow: 2px 3px 4px -2px;
+}
+.stockd_low{
+    color: red;
+
+}
+.stockd_high{
+    color: green;
+}
+.stock_load{
+    width: 100%;
+    margin-bottom:50px !important;
+}
+.stockd_button{
+    border-radius: 30px;
+    background-color: #C03EFD;
+    color: white;
+}
+.stockd_volume{
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    font-size: large;
+    color: darkmagenta;
+}
+.stockd_datepicker{
+    z-index: 11;
+    text-align: center;
+}
+.footer{
+    background-color: red;
+}
+.stockd_load{
+            margin-bottom:50px;
+            margin-top:20px;
+}

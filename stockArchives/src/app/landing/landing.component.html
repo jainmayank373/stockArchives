@@ -1,0 +1,33 @@
+<div id="landing"  fxLayout="" fxLayout.xs="column" >
+    <div class="landing_logo">
+        <img class="landing_logo_image" src="../../assets/images/image1.jpg">
+        
+    </div>
+    <div class="landing_search" fxLayout="row" fxLayoutAlign="center end">
+      <mat-form-field class="example-full-width">
+             <input matInput (keyup.enter)="searchTicker($event.target.value)" placeholder="Search...." type="text" value="">
+      </mat-form-field>
+    </div>
+    <div  class="landing_nav" fxLayoutAlign="end end">
+        <button  mat-button routerLink=''>HOME</button>
+        <button mat-button  routerLink="about">ABOUT</button>
+       
+    </div>
+
+    <div class="landing_tag_line"> 
+        <h1>The four most dangerous words in investing are<br>"This time it's different"</h1>
+    </div>
+    <div class="landing_tag" fxLayout="column" fxLayoutAlign="center">       
+      <a>  <button mat-raised-button color="warn"  id="landing_tag_button">CHECK STOCKS</button></a>
+    </div>
+    <div class="landing_bg" fxLayout="" >
+        
+        <img class="landing_bg_img1" src="../../assets/images/image4.jpg">
+
+    
+    </div>
+    <div class="landing_left"  fxLayoutAlign="end center">
+        <img class="landing_bg_img2" src="../../assets/images/image4.gif">
+    </div>
+</div> 
+<app-stock-details></app-stock-details>
